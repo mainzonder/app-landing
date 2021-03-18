@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+// ===  MIXIN ===
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+@mixin quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+// === / MIXIN ===
+
+// === VARIABLES ===
+$base: 4px;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$padding-vertical-xs: $base * 5;
+$padding-vertical-sm: $base * 15;
+$padding-vertical: $base * 30;
+$color-divider: #d8e3fe;
+
+// === / VARIABLES ===
+
+//=== COMMON ===
+
+body {
+    @include roboto;
+}
+.section-outer {
+    border-bottom: 1px solid $color-divider;
+}
+.section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: $padding-vertical;
+    padding-bottom: $padding-vertical;
+
+    &--wide {
+        max-width: 1200px;
+    }
+}
+
+//=== /  COMMON ===
+
+// === HEADER  ===
+.section-header {
+    .section-inner {
+        padding-top: $padding-vertical-xs;
+        padding-bottom: $padding-vertical-xs;
+    }
+}
+
+.main-navigation {
+    display: flex;
+}
+
+.logo {
+    background-color: #5e81fe;
+    width: $base * 6;
+    height: $base * 6;
+    border-radius: 100%;
+}
+
+.nav-wrapper {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    &__item {
+        & + & {
+            margin-left: $base * 10;
+        }
+        &-link {
+            @include quicksand;
+            font-size: 12px;
+            color: #697ca6;
+            font-weight: $fw-medium;
+            text-decoration: none;
+
+            &--active {
+                font-weight: $fw-bold;
+                color: #5e81fe;
+            }
+        }
+    }
+}
+// === / HEADER  ===
+
+// === HERO-IMAGE  ===
+
+.section-hero-image {
+    background-color: #f4f7ff;
+}
+// === / HERO-IMAGE  ===
+
+// === CUSTOMERS  ===
+.section-customers {
+    padding-top: $padding-vertical-sm;
+    padding-bottom: $padding-vertical-sm;
+}
+// === / CUSTOMERS  ===
+
+// === PLAN  ===
+.section-plan-and-manage {
+}
+// === / PLAN  ===
+
+// === FEATURES  ===
+.section-features {
+}
+// === / FEATURES  ===
+
+// === STATS  ===
+.section-stats {
+    padding-top: $padding-vertical-sm;
+    padding-bottom: $padding-vertical-sm;
+}
+// === / STATS  ===
+
+// === BLOG  ===
+.section-blog {
+    background-color: #f5f8ff;
+}
+// === / BLOG  ===
+
+// === QUOTES  ===
+.section-quotes {
+    background-color: #eaf0ff;
+}
+// === / QUOTES  ===
+
+// === FAQ  ===
+.section-faq {
+}
+// === / FAQ  ===
+
+// === GET-STARTED  ===
+.section-get-started {
+    background-color: #6888ff;
+}
+
+// === / GET-STARTED  ===
+
+// === NEWSLETTER  ===
+.section-newsletter {
+    background-color: #fcfdff;
+}
+// === / NEWSLETTER  ===
+
+// === FOOTER  ===
+.section-footer {
+    border-bottom: 0;
+    .section-inner {
+        padding-top: $padding-vertical-sm;
+        padding-bottom: $padding-vertical-sm;
+    }
+}
+// === / FOOTER  ===
